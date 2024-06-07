@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAFTAR PESANAN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DAFTAR PESANAN</h1>
+        </header>
+        <main>
+            <div class="actions">
+                <button onclick="showSection('drinks')">Tambah Minuman</button>
+                <button onclick="showSection('foods')">Tambah Makanan</button>
+                <button onclick="showTotal()">Lihat Total</button>
+                <button onclick="showSection('checkout')">Bayar</button>
+            </div>
+            <div id="drinks" class="section">
+                <h2>Pilih Minuman:</h2>
+                <ul id="drinks-list">
+                    <!-- Minuman akan dimasukkan di sini melalui JavaScript -->
+                </ul>
+                <button class="back-btn" onclick="hideSection('drinks')">Kembali</button>
+            </div>
+            <div id="foods" class="section">
+                <h2>Pilih Makanan:</h2>
+                <ul id="foods-list">
+                    <!-- Makanan akan dimasukkan di sini melalui JavaScript -->
+                </ul>
+                <button class="back-btn" onclick="hideSection('foods')">Kembali</button>
+            </div>
+            <div id="total" class="section">
+                <h2>Total Harga:</h2>
+                <p id="total-price">Rp 0</p>
+                <button class="back-btn" onclick="hideSection('total')">Kembali</button>
+            </div>
+            <div id="checkout" class="section">
+                <h2>Bayar</h2>
+                <p id="total-checkout-price">Total: Rp 0</p>
+                <input type="number" id="payment" placeholder="Masukkan jumlah pembayaran">
+                <button onclick="processPayment()">Bayar</button>
+                <p id="checkout-result"></p>
+                <button class="back-btn" onclick="hideSection('checkout')">Kembali</button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

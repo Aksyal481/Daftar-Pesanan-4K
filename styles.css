@@ -1,0 +1,138 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('background.jpg'); /* URL gambar */
+    background-size: cover; /* Untuk menyesuaikan ukuran gambar dengan layar */
+    background-repeat: no-repeat; /* Untuk menghindari pengulangan gambar */
+    background-position: center; /* Untuk menentukan posisi gambar di tengah */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.container {
+    background: #2b2b2b; /* Warna abu-abu gelap */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    height: 80vh;
+    overflow-y: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    color: #fff; /* Warna putih */
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    background-color: #ffd700; /* gold */
+    color: #000; /* Warna hitam */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #e6c300; /* darker gold */
+    transform: translateY(-3px);
+}
+
+.section {
+    display: none;
+    margin-top: 20px;
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+li:hover {
+    background: #e9ecef;
+    transform: translateY(-3px);
+}
+
+.back-btn {
+    background-color: #6c757d;
+}
+
+.back-btn:hover {
+    background-color: #5a6268;
+}
+
+input[type="number"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #ffd700; /* gold */
+    outline: none;
+}
+
+/* Mengubah warna teks sesuai permintaan */
+.actions button {
+    color: #000; /* Warna hitam */
+}
+
+#drinks h2,
+#foods h2,
+#total h2,
+#checkout h2 {
+    color: #fff; /* Warna putih */
+}
